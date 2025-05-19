@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Контакти — Borovko Connection</title>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+<body>
+
+  <button id="theme-toggle" aria-label="Змінити тему">
+    <div class="toggle-track">
+      <div class="toggle-thumb">
+        <span class="icon">🌙</span>
+      </div>
+    </div>
+  </button>
+
+  <header>
+    <div class="container">
+      <h1 class="logo">Borovko Connection</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="tariffs.html">Тарифи</a></li>
+          <li><a href="contacts.html">Контакти</a></li>
+          <li><a href="about.html">Типи підключення</a></li>
+          <li><a href="cabinet.html">Особистий кабінет</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="about">
+      <h2>Контактна інформація</h2>
+      <div class="feature-grid">
+        <div class="feature-item">
+          <i data-lucide="map-pin"></i><strong> Адреса:</strong><br>
+          м. Бориспіль, вул. Центральна, 12
+        </div>
+        <div class="feature-item">
+          <i data-lucide="phone-call"></i><strong> Підключення:</strong><br>
+          +38 (050) 123-45-67 (Vodafone)<br>
+          +38 (096) 111-22-33 (Kyivstar)
+        </div>
+        <div class="feature-item">
+          <i data-lucide="headphones"></i><strong> Техпідтримка (24/7):</strong><br>
+          +38 (073) 555-66-77 (Lifecell)
+        </div>
+        <div class="feature-item">
+          <i data-lucide="handshake"></i><strong> Співпраця:</strong><br>
+          +38 (044) 789-00-11
+        </div>
+        <div class="feature-item">
+          <i data-lucide="mail"></i><strong> Email:</strong><br>
+          connect@borovko.net<br>
+          support@borovko.net<br>
+          biz@borovko.net
+        </div>
+        <div class="feature-item">
+          <i data-lucide="clock"></i><strong> Графік роботи:</strong><br>
+          Пн–Пт: 09:00 – 18:00<br>
+          Сб–Нд: вихідні
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Зв’яжіться з нами</h2>
+      <form id="feedback-form">
+        <input type="text" id="name" name="name" placeholder="Ваше ім’я" required>
+        <input type="text" id="contact" name="contact" placeholder="Телефон або Email" required>
+
+        <select name="topic" required>
+          <option value="">Оберіть тему звернення</option>
+          <option value="Підключення">Підключення</option>
+          <option value="Підтримка">Техпідтримка</option>
+          <option value="Співпраця">Співпраця</option>
+          <option value="Інше">Інше</option>
+        </select>
+
+        <textarea id="message" name="message" placeholder="Ваше повідомлення..." rows="5" required></textarea>
+
+        <label class="consent">
+          <input type="checkbox" required>
+          Я погоджуюсь на обробку персональних даних
+        </label>
+
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <button type="submit" class="btn">Надіслати</button>
+          <button type="reset" class="btn secondary">Очистити</button>
+        </div>
+      </form>
+      <p id="form-success" class="form-success">Повідомлення надіслано! Очікуйте відповідь найближчим часом.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Borovko Connection. Усі права захищено.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

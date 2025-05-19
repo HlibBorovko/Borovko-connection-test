@@ -1,0 +1,903 @@
+:root {
+  --bg-color: #f9fbfd;
+  --text-color: var(--text-color);
+  --accent-color: #0077cc;
+  --accent-dark: #005fa3;
+  --section-bg: #ffffff;
+  --border-color: #e1e8ed;
+  --header-bg: #ffffff;
+  --font-main: 'Inter', sans-serif;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Контейнер */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+header {
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1.5rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+}
+
+.logo {
+  margin: 0;
+  color: var(--accent-color);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 0;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+  background-color: var(--section-bg);
+  border: 1px solid var(--border-color);
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.04);
+}
+
+.hero h2 {
+  color: var(--accent-color);
+  font-size: 2rem;
+}
+
+.btn {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--accent-dark);
+}
+
+.btn.secondary {
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+.btn.secondary:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/* Features */
+.features {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.feature-item {
+  background-color: var(--section-bg);
+  border: 1px solid var(--border-color);
+  padding: 1.2rem;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  box-shadow: 0 0 5px rgba(0,0,0,0.03);
+}
+
+
+/* Про нас + CTA */
+.about, .cta {
+  background-color: var(--section-bg);
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 3rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.04);
+}
+
+.about h2, .cta h2 {
+  color: var(--accent-color);
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  margin-top: 4rem;
+  background-color: var(--header-bg);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  color: #777;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Theme toggle button */
+#theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 999;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Трек перемикача */
+.toggle-track {
+  width: 60px;
+  height: 30px;
+  background-color: var(--section-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 30px;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-thumb {
+  width: 26px;
+  height: 26px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: left 0.3s ease, background-color 0.3s ease;
+}
+
+.toggle-thumb .icon {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+/* Темна тема */
+body.dark-theme {
+  --bg-color: #1e1e1e;
+  --text-color: #d5d5d5;
+  --accent-color: #33aaff;
+  --accent-dark: #2082c9;
+  --section-bg: #2a2a2a;
+  --header-bg: #242424;
+  --border-color: #3d3d3d;
+}
+
+body.dark-theme .toggle-thumb {
+  left: 33px;
+  background-color: var(--accent-dark);
+}
+
+body.dark-theme .toggle-thumb .icon {
+  transform: rotate(180deg);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+.center {
+  display: block;
+  width: fit-content;
+  margin: 1rem auto 0;
+}
+
+.services {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-card {
+  background-color: var(--section-bg);
+  border-radius: 16px;
+  padding: 2rem 1rem;
+  text-decoration: none;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.icon-box {
+  background-color: var(--section-bg);
+  border-radius: 12px;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.service-card span {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.accordion {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.accordion-toggle {
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.4rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.accordion-toggle:hover {
+  background-color: var(--accent-dark);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  text-align: left;
+  background-color: var(--section-bg);
+  padding: 0 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+.accordion-section {
+  margin-top: 1.5rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.accordion-section h3 {
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+  text-align: left;
+}
+
+blockquote {
+  background-color: var(--section-bg);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 4px solid var(--accent-color);
+  font-style: italic;
+  border-radius: 6px;
+}
+
+.faq-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.faq-list li {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.help-cta {
+  background-color: var(--section-bg);
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 3rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.04);
+}
+
+.help-cta h2 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.help-cta p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.tariff-selector {
+  text-align: center;
+  margin: 3rem 0 2rem;
+}
+
+.tariff-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.tariff-tab {
+  background-color: var(--section-bg);
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tariff-tab.active,
+.tariff-tab:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+.tariff-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tariff-tab i {
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+
+.tariff-group {
+  display: none;
+  animation: fadeIn 0.4s ease-in;
+}
+
+.tariff-group.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tariff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.tariff-card {
+  background-color: var(--section-bg);
+  border: 1px solid var(--border-color);
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tariff-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.tariff-card h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color: var(--accent-color);
+}
+
+.tariff-card .speed {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.tariff-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  text-align: left;
+}
+
+.tariff-card ul li {
+  margin-bottom: 0.6rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.tariff-card ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.tariff-card .price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+main.container {
+  width: 100%;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  background-color: var(--section-bg);
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  position: relative;
+  font-family: 'Inter', sans-serif;
+}
+
+.modal-content h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.modal-content .submit-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modal-content .submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.note {
+  font-size: 0.75rem;
+  color: #666;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#theme-toggle {
+  width: 60px;
+  height: 30px;
+}
+
+@media (max-width: 400px) {
+  .modal-content {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .modal-content input,
+  .modal-content textarea {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+  border-color: var(--accent-color);
+  outline: none;
+  box-shadow: 0 0 5px rgba(0,119,204,0.3);
+}
+
+/* 🔧 Оформлення форми зв'язку */
+.cta form label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.cta form input,
+.cta form textarea,
+.cta form select {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cta form label {
+  font-size: 0.9rem;
+}
+
+.cta form .btn {
+  width: fit-content;
+}
+
+.cta form label {
+  margin-top: 0.5rem;
+}
+
+label.consent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-top: 1rem;
+}
+
+label.consent input[type="checkbox"] {
+  margin: 0;
+  width: 18px;
+  height: 18px;
+}
+
+#form-success {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  background-color: #d4edda;
+  color: #155724;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#form-success.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.about,
+.cta {
+  background-color: var(--section-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cta form input,
+.cta form textarea,
+.cta form select {
+  background-color: var(--section-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+body.dark-theme #form-success {
+  background-color: #245032;
+  color: #c2f0d3;
+}
+
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none; /* сховане за замовчуванням */
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal.active {
+  display: flex; /* зʼявляється тільки коли додаємо .active */
+}
+
+/* 📁 Кабінет — вкладки */
+.cabinet-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.cabinet-tabs .tab {
+  background-color: var(--section-bg);
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  font-weight: 600;
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cabinet-tabs .tab.active,
+.cabinet-tabs .tab:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+/* 📁 Кабінет — контент вкладок */
+.tab-content {
+  background-color: var(--section-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 10px rgba(0,0,0,0.04);
+  margin-bottom: 2rem;
+}
+
+/* 📁 Кабінет — таблиця історії оплат */
+.tab-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.tab-content th,
+.tab-content td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tab-content tr:hover {
+  background-color: rgba(0, 119, 204, 0.05);
+}
+
+/* 📁 Кабінет — заголовки */
+.tab-content h3 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+/* 📁 Кнопки в профілі */
+#cabinet .btn {
+  margin-top: 1rem;
+}
+
+/* Адаптивність */
+@media (max-width: 600px) {
+  .cabinet-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* 🔐 Форми входу та реєстрації */
+.login-form,
+.register-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  min-height: 80vh;
+}
+
+.form-card {
+  background-color: var(--section-bg);
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border: 1px solid var(--border-color);
+  margin: 0 auto; /* 🔥 головне для відцентрування */
+}
+
+
+.form-card h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--accent-color);
+}
+
+.form-card input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--input-bg, #f9f9f9);
+  transition: border 0.3s;
+}
+
+.form-card input:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+.form-card .btn {
+  width: 100%;
+  padding: 0.75rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.form-card p {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.form-card a {
+  color: var(--accent-color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.tariff-options h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent-color);
+  font-size: 1rem;
+}
+
+.tariff-options .lucide {
+  width: 20px;
+  height: 20px;
+}
+
+.tariff-options label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 0.6rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  width: 100%;
+  gap: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tariff-options input[type="radio"] {
+  margin: 0;
+  appearance: auto;
+  accent-color: var(--accent-color);
+  flex-shrink: 0;
+  transform: scale(1.05);
+}
+
+.radio-wrapper {
+  width: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.bonus-list {
+  padding-left: 1.2rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+.bonus-list li {
+  margin-bottom: 0.5rem;
+}

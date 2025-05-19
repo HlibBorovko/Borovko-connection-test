@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Особистий кабінет — Borovko Connection</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  
+  <button id="theme-toggle" aria-label="Змінити тему">
+    <div class="toggle-track">
+      <div class="toggle-thumb">
+        <span class="icon">🌙</span>
+      </div>
+    </div>
+  </button>
+
+  <header>
+    <div class="container">
+      <h1 class="logo">Borovko Connection</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="tariffs.html">Тарифи</a></li>
+          <li><a href="contacts.html">Контакти</a></li>
+          <li><a href="about.html">Типи підключення</a></li>
+          <li><a href="cabinet.html">Особистий кабінет</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <section class="login-form" id="login-form">
+      <div class="form-card">
+        <h2>Вхід до особистого кабінету</h2>
+        <input type="text" id="login" placeholder="Введіть логін" required />
+        <input type="password" id="password" placeholder="Введіть пароль" required />
+        <button class="btn" onclick="loginUser()">Вхід</button>
+        <p><a href="#" onclick="showRegisterForm()">Створити особистий кабінет</a></p>
+      </div>
+    </section>
+
+   
+    <section class="register-form" id="register-form" style="display:none;">
+      <div class="form-card">
+        <h2>Створення особистого кабінету</h2>
+        <input type="text" id="reg-login" placeholder="Оберіть логін" required />
+        <input type="email" id="reg-email" placeholder="Введіть email" required />
+        <input type="password" id="reg-password" placeholder="Пароль" required />
+        <input type="password" id="reg-password-confirm" placeholder="Повторіть пароль" required />
+        <button class="btn" onclick="registerUser()">Зареєструватися</button>
+        <p><a href="#" onclick="showLoginForm()">Вже є акаунт?</a></p>
+      </div>
+    </section>
+
+    
+    <section class="cabinet" id="cabinet" style="display:none;">
+      <h2>Особистий кабінет</h2>
+
+      <div class="cabinet-tabs">
+        <button class="tab active" data-tab="profile">Профіль</button>
+        <button class="tab" data-tab="tariff">Тарифний план</button>
+        <button class="tab" data-tab="payments">Історія оплат</button>
+      </div>
+
+      <div class="tab-content active" id="profile">
+        <h3>Профіль користувача</h3>
+        <p>Ім'я: Гліб Боровко</p>
+        <p>Email: borovkotraining@gmail.com</p>
+        <p><strong>Баланс:</strong> <span id="balance">120</span> грн</p>
+        <button class="btn" onclick="openTopUpModal()">Поповнити баланс</button>
+      </div>
+
+      <div class="tab-content" id="tariff">
+        <h3>Тарифний план</h3>
+        <p>Поточний тариф: <span id="current-tariff">Оптимальний</span></p>
+        <button class="btn" onclick="openTariffModal()">Змінити тариф</button>
+      </div>
+
+      <div class="tab-content" id="payments">
+        <h3>Історія оплат</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Дата</th>
+              <th>Сума</th>
+              <th>Статус</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>01.05.2025</td>
+              <td>120 грн</td>
+              <td>Оплачено</td>
+            </tr>
+            <tr>
+              <td>01.04.2025</td>
+              <td>120 грн</td>
+              <td>Оплачено</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    
+<div class="modal" id="tariff-modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeTariffModal()">&times;</span>
+    <h3>Оберіть новий тариф</h3>
+    <div class="tariff-options"></div> 
+    <button class="btn" onclick="changeTariff()">Зберегти</button>
+  </div>
+</div>
+
+
+    
+    <div class="modal" id="topup-modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeTopUpModal()">&times;</span>
+        <h3>Поповнити рахунок</h3>
+        <input type="number" id="topup-amount" placeholder="Сума в грн" min="1" />
+        <button class="btn" onclick="topUpBalance()">Оплатити</button>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Borovko Connection. Усі права захищено.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Тарифи — Borovko Connection</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+<body>
+
+  
+  <button id="theme-toggle" aria-label="Змінити тему">
+    <div class="toggle-track">
+      <div class="toggle-thumb">
+        <span class="icon">🌙</span>
+      </div>
+    </div>
+  </button>
+
+  <div class="page-wrapper">
+
+  <header>
+    <div class="container">
+      <h1 class="logo">Borovko Connection</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="tariffs.html">Тарифи</a></li>
+          <li><a href="contacts.html">Контакти</a></li>
+          <li><a href="about.html">Типи підключення</a></li>
+          <li><a href="cabinet.html">Особистий кабінет</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+    <main class="container">
+
+  <section class="tariff-selector">
+    <h2>Оберіть тип підключення</h2>
+    <div class="tariff-buttons">
+      <button class="tariff-tab active" data-target="apartments">
+        <i data-lucide="building"></i> Квартири
+      </button>
+      <button class="tariff-tab" data-target="private">
+        <i data-lucide="home"></i> Приватний сектор
+      </button>
+      <button class="tariff-tab" data-target="business">
+        <i data-lucide="briefcase"></i> Бізнес
+      </button>
+    </div>
+  </section>
+
+    
+    <section id="apartments" class="tariff-group active">
+      <div class="tariff-grid">
+        <div class="tariff-card"><h3>Лайт</h3><p class="speed">до 50 Мбіт/с</p><ul><li>Браузинг, соцмережі</li><li>HD YouTube</li></ul><p class="price">170 грн/міс</p><button class="btn connect-btn" data-tariff="Лайт">Підключити</button></div>
+        <div class="tariff-card"><h3>Базовий</h3><p class="speed">до 100 Мбіт/с</p><ul><li>Щоденне використання</li><li>1-2 пристрої</li></ul><p class="price">200 грн/міс</p><button class="btn connect-btn" data-tariff="Базовий">Підключити</button></div>
+        <div class="tariff-card"><h3>Комфорт</h3><p class="speed">до 300 Мбіт/с</p><ul><li>Навчання, Zoom</li><li>HD-фільми</li></ul><p class="price">270 грн/міс</p><button class="btn connect-btn"  data-tariff="Комфорт">Підключити</button></div>
+        <div class="tariff-card"><h3>Оптимум</h3><p class="speed">до 500 Мбіт/с</p><ul><li>Ігри + родина</li><li>4K відео</li></ul><p class="price">350 грн/міс</p><button class="btn connect-btn" data-tariff="Оптимум">Підключити</button></div>
+        <div class="tariff-card"><h3>Максимум</h3><p class="speed">до 800 Мбіт/с</p><ul><li>Геймінг, NAS</li><li>Google Drive</li></ul><p class="price">450 грн/міс</p><button class="btn connect-btn"data-tariff="Максимум">Підключити</button></div>
+        <div class="tariff-card"><h3>Гіга</h3><p class="speed">до 1 Гбіт/с</p><ul><li>Все включено</li><li>Робота, хмара</li></ul><p class="price">550 грн/міс</p><button class="btn connect-btn"data-tariff="Гіга">Підключити</button></div>
+      </div>
+    </section>
+
+   
+    <section id="private" class="tariff-group">
+      <div class="tariff-grid">
+        <div class="tariff-card"><h3>Домашній</h3><p class="speed">до 50 Мбіт/с</p><ul><li>Соцмережі, новини</li><li>Легке використання</li></ul><p class="price">200 грн/міс</p><button class="btn connect-btn" data-tariff="Домашній">Підключити</button></div>
+        <div class="tariff-card"><h3>Плюс</h3><p class="speed">до 100 Мбіт/с</p><ul><li>Netflix, відео</li><li>Пара пристроїв</li></ul><p class="price">250 грн/міс</p><button class="btn connect-btn" data-tariff="Плюс">Підключити</button></div>
+        <div class="tariff-card"><h3>Комфорт</h3><p class="speed">до 200 Мбіт/с</p><ul><li>Родина</li><li>Без збоїв</li></ul><p class="price">300 грн/міс</p><button class="btn connect-btn" data-tariff="Комфорт">Підключити</button></div>
+        <div class="tariff-card"><h3>Потужний</h3><p class="speed">до 300 Мбіт/с</p><ul><li>Хмари, Zoom</li><li>Smart TV</li></ul><p class="price">370 грн/міс</p><button class="btn connect-btn" data-tariff="Потужний">Підключити</button></div>
+        <div class="tariff-card"><h3>4К-стрім</h3><p class="speed">до 500 Мбіт/с</p><ul><li>4K, IPTV</li><li>Google One</li></ul><p class="price">450 грн/міс</p><button class="btn connect-btn" data-tariff="4К-стрім">Підключити</button></div>
+        <div class="tariff-card"><h3>Приват MAX</h3><p class="speed">до 800 Мбіт/с</p><ul><li>Будь-які задачі</li><li>З запасом</li></ul><p class="price">550 грн/міс</p><button class="btn connect-btn" data-tariff="Приват MAX">Підключити</button></div>
+      </div>
+    </section>
+
+    
+    <section id="business" class="tariff-group">
+      <div class="tariff-grid">
+        <div class="tariff-card"><h3>Start Biz</h3><p class="speed">до 100 Мбіт/с</p><ul><li>Невеликі офіси</li><li>Бюджетне рішення</li></ul><p class="price">350 грн/міс</p><button class="btn connect-btn" data-tariff="Start Biz">Підключити</button></div>
+        <div class="tariff-card"><h3>Biz Net</h3><p class="speed">до 300 Мбіт/с</p><ul><li>Стабільність</li><li>Без обривів</li></ul><p class="price">500 грн/міс</p><button class="btn connect-btn" data-tariff="Biz Net">Підключити</button></div>
+        <div class="tariff-card"><h3>Office 500</h3><p class="speed">до 500 Мбіт/с</p><ul><li>IP-адреса</li><li>Офісна стабільність</li></ul><p class="price">700 грн/міс</p><button class="btn connect-btn" data-tariff="Office 500">Підключити</button></div>
+        <div class="tariff-card"><h3>Gigabit Pro</h3><p class="speed">до 1 Гбіт/с</p><ul><li>Сервери</li><li>Онлайн-сервіси</li></ul><p class="price">950 грн/міс</p><button class="btn connect-btn" data-tariff="Gigabit Pro">Підключити</button></div>
+        <div class="tariff-card"><h3>Fiber Connect</h3><p class="speed">до 1 Гбіт/с</p><ul><li>Оптоволокно</li><li>Резервування</li></ul><p class="price">1200 грн/міс</p><button class="btn connect-btn" data-tariff="Fiber Connect">Підключити</button></div>
+        <div class="tariff-card"><h3>Корпоративний</h3><p class="speed">Індивідуально</p><ul><li>SLA-контракт</li><li>Підтримка 24/7</li></ul><p class="price">за запитом</p><button class="btn connect-btn" data-tariff="Корпоративний">Підключити</button></div>
+      </div>
+    </section>
+
+  </main>
+
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Заявка на підключення</h2>
+    <form id="modal-form">
+      <input type="text" placeholder="ПІБ" required>
+      <input type="tel" placeholder="Номер телефону" required>
+      <input type="text" placeholder="Бажаний час дзвінка">
+      <textarea placeholder="Коментар" rows="4"></textarea>
+      <button type="submit" class="submit-btn">Відправити</button>
+      <p class="note">Натискаючи кнопку, ви надаєте згоду на обробку своїх персональних даних.</p>
+    </form>
+  </div>
+</div>
+
+  <footer>
+    <p>&copy; 2025 Borovko Connection. Усі права захищено.</p>
+  </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</div>
+
+</body>
+</html>
