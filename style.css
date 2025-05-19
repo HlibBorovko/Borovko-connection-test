@@ -19,14 +19,14 @@ body {
   line-height: 1.6;
 }
 
-/* Контейнер */
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-/* Header */
+
 header {
   background-color: var(--header-bg);
   border-bottom: 1px solid var(--border-color);
@@ -62,7 +62,7 @@ header {
   color: var(--accent-color);
 }
 
-/* Hero Section */
+
 .hero {
   background-color: var(--section-bg);
   border: 1px solid var(--border-color);
@@ -130,7 +130,7 @@ header {
 }
 
 
-/* Про нас + CTA */
+
 .about, .cta {
   background-color: var(--section-bg);
   border: 1px solid var(--border-color);
@@ -145,7 +145,7 @@ header {
   text-align: center;
 }
 
-/* Footer */
+
 footer {
   margin-top: 4rem;
   background-color: var(--header-bg);
@@ -156,7 +156,7 @@ footer {
   border-top: 1px solid var(--border-color);
 }
 
-/* Theme toggle button */
+
 #theme-toggle {
   position: fixed;
   top: 1rem;
@@ -167,7 +167,7 @@ footer {
   cursor: pointer;
 }
 
-/* Трек перемикача */
+
 .toggle-track {
   width: 60px;
   height: 30px;
@@ -605,7 +605,7 @@ main.container {
   box-shadow: 0 0 5px rgba(0,119,204,0.3);
 }
 
-/* 🔧 Оформлення форми зв'язку */
+
 .cta form label {
   display: flex;
   align-items: center;
@@ -705,17 +705,17 @@ body.dark-theme #form-success {
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.5);
-  display: none; /* сховане за замовчуванням */
+  display: none; 
   align-items: center;
   justify-content: center;
   z-index: 999;
 }
 
 .modal.active {
-  display: flex; /* зʼявляється тільки коли додаємо .active */
+  display: flex;  
 }
 
-/* 📁 Кабінет — вкладки */
+
 .cabinet-tabs {
   display: flex;
   justify-content: center;
@@ -741,7 +741,7 @@ body.dark-theme #form-success {
   color: #fff;
 }
 
-/* 📁 Кабінет — контент вкладок */
+
 .tab-content {
   background-color: var(--section-bg);
   padding: 2rem;
@@ -751,7 +751,7 @@ body.dark-theme #form-success {
   margin-bottom: 2rem;
 }
 
-/* 📁 Кабінет — таблиця історії оплат */
+
 .tab-content table {
   width: 100%;
   border-collapse: collapse;
@@ -769,13 +769,13 @@ body.dark-theme #form-success {
   background-color: rgba(0, 119, 204, 0.05);
 }
 
-/* 📁 Кабінет — заголовки */
+
 .tab-content h3 {
   color: var(--accent-color);
   margin-bottom: 1rem;
 }
 
-/* 📁 Кнопки в профілі */
+
 #cabinet .btn {
   margin-top: 1rem;
 }
@@ -788,7 +788,7 @@ body.dark-theme #form-success {
   }
 }
 
-/* 🔐 Форми входу та реєстрації */
+
 .login-form,
 .register-form {
   display: flex;
@@ -806,7 +806,7 @@ body.dark-theme #form-success {
   width: 100%;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   border: 1px solid var(--border-color);
-  margin: 0 auto; /* 🔥 головне для відцентрування */
+  margin: 0 auto; 
 }
 
 
